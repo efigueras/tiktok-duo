@@ -43,7 +43,7 @@ static NSString *TCLLayoutTitle(NSInteger value) {
 }
 static void TCLMigrateLayout(void) {
     if (TCLLayoutSelection() >= 0) return;
-    NSInteger selected = 0;
+    NSInteger selected = 1;
     if (![TCLPrefs objectForKey:TCLLayoutKey]) {
         if ([[TCLPrefs objectForKey:@"TCLCover.mode.full_width_chrome"] isEqual:@1]) selected = 2;
         else if ([[TCLPrefs objectForKey:@"TCLCover.mode.glass_tabs"] isEqual:@1] &&
